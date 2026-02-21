@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+    <script>
+      (function() {
+        const silence = (original) => (...args) => {
+          const pattern = /TensorFlow Lite|XNNPACK|delegate/i;
+          const isTFLite = args.some(arg => 
+            typeof arg === 'string' && pattern.test(arg)
+          );
+          if (!isTFLite) original.apply(console, args);
+        };
+        if (window.console) {
+          console.log = silence(console.log);
+          console.info = silence(console.info);
+          console.warn = silence(console.warn);
+          console.debug = silence(console.debug);
+          console.error = silence(console.error);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

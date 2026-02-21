@@ -1,0 +1,5 @@
+{
+  "name": "RKAY Duration Engine v2",
+  "description": "A deterministic temporal classification interface performing high-precision intent mapping based on articulation duration.",
+  "requestFramePermissions": ["camera"]
+}

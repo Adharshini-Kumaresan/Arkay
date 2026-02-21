@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg-color: #0A0A0B;
+  --card-bg: #151619;
+  --accent: #00FF41; /* Matrix/Terminal Green */
+  --accent-muted: rgba(0, 255, 65, 0.2);
+  --text-primary: #FFFFFF;
+  --text-secondary: #8E9299;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.hardware-panel {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.scanline {
+  width: 100%;
+  height: 2px;
+  background: var(--accent-muted);
+  opacity: 0.1;
+  position: absolute;
+  bottom: 100%;
+  animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+  0% { bottom: 100%; }
+  100% { bottom: 0%; }
+}
+
+.glow-text {
+  text-shadow: 0 0 10px var(--accent-muted);
+}
