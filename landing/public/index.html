@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Arkay is building silent-speech technology for people who lose the ability to speak. Request a demo for your care team.">
+<meta name="theme-color" content="#faf8fe">
+<title>Arkay — Give silence a voice</title>
+<link rel="icon" href="/arkay-tab-icon.png" type="image/png" sizes="48x48">
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas id="letters" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <a href="#top" class="identity" aria-label="Arkay home">ARKAY<span aria-hidden="true"> /ɑɹkeɪ/</span></a>
+      <nav aria-label="Main navigation"><a href="#how">How it works</a><a class="button outline" href="#demo">Book a demo</a></nav>
+    </header>
+    <div class="hero-copy">
+      <p class="phonetic" aria-hidden="true">/ ɑ · ɹ · k · eɪ /</p>
+      <h1 id="hero-title">ARKAY</h1>
+      <p class="intro">Help patients say what they need when they can’t speak.</p><a class="button primary hero-demo" href="#demo">Request an Arkay demo</a>
+    </div>
+    <div class="hero-controls">
+      <a href="#how">Explore silent speech <span aria-hidden="true">↓</span></a>
+      <button id="alphabet" type="button" hidden>Show letters</button>
+      <button id="motion" type="button" hidden>Pause motion</button>
+    </div>
+  </section>
+  <section class="origin content" id="origin" aria-labelledby="origin-title">
+    <header class="origin-intro">
+      <p class="eyebrow">THE STORY BEHIND ARKAY</p>
+      <h2 id="origin-title">It started at my grandfather’s bedside.</h2>
+    </header>
+    <div class="origin-track">
+      <div class="origin-visual" aria-hidden="true">
+        <div class="origin-stage" data-scene="bedside">
+          <picture>
+            <source media="(prefers-reduced-motion: reduce)" srcset="/patient-voice.webp">
+            <img class="origin-art origin-photo" src="/patient-voice.gif" alt="" width="412" height="623" loading="lazy" decoding="async">
+          </picture>
+          <div class="origin-output">“Water.”</div>
+        </div>
+      </div>
+      <div class="origin-chapters">
+        <article data-scene="bedside"><h3>He had something to say.</h3><p>My grandfather spent 25 days in the ICU following a tracheostomy. During that time, speaking became difficult. I kept thinking about how hard it could be to ask for something as simple as water.</p></article>
+        <article data-scene="movement"><h3>Could a movement carry a word?</h3><p>I started with what a person already does when they try to speak. Their lips move. So does their jaw. I wanted to see whether those movements could help us tell which word they were trying to say.</p></article>
+        <article data-scene="voice"><h3>Start with a word that matters.</h3><p>That question became Arkay. We began with a small English vocabulary for everyday needs. The prototype suggests likely matches, then gives a caregiver a chance to confirm the word and play it aloud.</p><p class="origin-signature">Adharshini · Founder of Arkay</p><a class="button primary" href="#demo">See the prototype in a demo</a></article>
+      </div>
+    </div>
+  </section>
+  <section id="how" class="how content" aria-labelledby="how-title">
+    <p class="eyebrow">HOW ARKAY WORKS</p>
+    <h2 id="how-title">From a silent attempt to a spoken word.</h2>
+    <div class="steps patient-flow"><article><svg viewBox="0 0 160 120" aria-hidden="true"><path d="M32 89c-9-14-11-34-4-52 8-20 26-29 45-27 22 2 33 17 34 35l12 17-12 5-2 16c-1 7-6 11-15 11H75l-4 15H44l4-11"/><path d="M86 46h5m15 28h-12l-7 4 8 3h10"/><path d="M119 72q10 6 0 12m8-18q18 12 0 24"/><circle cx="98" cy="78" r="12" stroke-dasharray="3 4"/></svg><h3>Try to speak</h3><p>A patient mouths a word such as “water.”</p></article><article><svg viewBox="0 0 160 120" aria-hidden="true"><path d="M32 89c-9-14-11-34-4-52 8-20 26-29 45-27 22 2 33 17 34 35l12 17-12 5-2 16c-1 7-6 11-15 11H75l-4 15H44l4-11"/><path d="M86 46h5m15 28h-12l-7 4 8 3h10"/><path d="M87 91q11 6 21-1m9-17v11m7-16v21m7-26v31m7-23v16"/></svg><h3>Capture the movement</h3><p>A camera tracks the lips and a sensor picks up movement at the jaw.</p></article><article><svg viewBox="0 0 160 120" aria-hidden="true"><path d="M32 89c-9-14-11-34-4-52 8-20 26-29 45-27 22 2 33 17 34 35l12 17-12 5-2 16c-1 7-6 11-15 11H75l-4 15H44l4-11"/><path d="M86 46h5m15 28h-12l-7 4 8 3h10"/><path d="M124 59h25v25h-25z M130 72l5 5 9-12"/></svg><h3>Review the suggestions</h3><p>Arkay offers likely matches from its trained vocabulary. A caregiver can confirm the intended word.</p></article><article><svg viewBox="0 0 160 120" aria-hidden="true"><path d="M32 89c-9-14-11-34-4-52 8-20 26-29 45-27 22 2 33 17 34 35l12 17-12 5-2 16c-1 7-6 11-15 11H75l-4 15H44l4-11"/><path d="M86 46h5m15 28h-12l-7 4 8 3h10"/><path d="M117 78h5l4-7 4 15 5-24 5 31 5-18 4 3h7"/></svg><h3>Play the word aloud</h3><p>Arkay speaks the confirmed word so the care team can hear it.</p></article></div>
+  </section>
+  <section class="proof content" aria-labelledby="proof-title">
+    <div class="voice-art" aria-hidden="true"><svg viewBox="0 0 180 120"><path d="M8 60h18l8-14 9 29 10-45 10 60 12-68 11 77 11-59 10 39 10-31 10 22 10-10h34"/><path class="guide" d="M8 60h164"/></svg></div>
+    <div><p class="eyebrow">THE PROTOTYPE TODAY</p>
+    <h2 id="proof-title">Start with words that matter at the bedside.</h2>
+    <p>Arkay’s early English proof of concept was trained on 30 words. In the demo, you’ll see the limited vocabulary in action and how a caregiver reviews a suggested word before it’s played aloud.</p></div>
+  </section>
+  <section id="demo" class="demo" aria-labelledby="demo-title">
+    <div class="content demo-layout">
+      <div>
+        <p class="eyebrow">FOR HOSPITALS &amp; CARE TEAMS</p>
+        <h2 id="demo-title">Bring a bedside communication challenge.</h2>
+        <p>Bring an example from your ward. We’ll show you a silent attempt, the suggested words, and the caregiver confirmation step. Then we’ll discuss where Arkay could fit into your workflow.</p>
+      </div>
+      <form id="request" method="post" action="/api/demo">
+        <label>Full name<input required name="name" autocomplete="name" maxlength="100"></label>
+        <label>Work email<input required name="email" type="email" autocomplete="email" maxlength="254"></label>
+        <label>Organization<input required name="organization" autocomplete="organization" maxlength="160"></label>
+        <label>Role <span>(optional)</span><input name="role" autocomplete="organization-title" maxlength="100"></label>
+        <div hidden aria-hidden="true"><label>Leave empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button type="submit" class="button primary">Request a demo</button>
+        <p id="notice" role="status" aria-live="polite">We’ll email you to arrange a time and ask what you’d like to see.</p>
+      </form>
+    </div>
+  </section>
+  <section class="faq content" aria-labelledby="faq-title">
+    <h2 id="faq-title">Before you book</h2>
+    <details><summary>Can Arkay recognize a full conversation?</summary><p>The current proof of concept works with a limited set of trained English words.</p></details>
+    <details><summary>What happens if Arkay is unsure?</summary><p>Arkay can show several likely matches for a caregiver to review before playing a word aloud.</p></details>
+    <details><summary>Who should join the demo?</summary><p>ICU nurses, intensivists, speech-language pathologists, tracheostomy and rehabilitation teams, and hospital innovation leads.</p></details>
+  </section>
+</main>
+<footer class="content"><a href="#top" aria-label="Arkay home"><img src="/logo.webp" width="82" height="35" alt="Arkay"></a><span>Silent speech technology in development.</span></footer>
+</body>
+</html>
